@@ -1,0 +1,7 @@
+﻿Node: v24.15.0
+npm: 11.12.1
+Vite: 8.3.8
+npm ci: 169 pacotes; 0 vulnerabilidades reportadas
+npm run lint: exit 0
+npm run build: exit 0; 79 modulos
+Bundle sem http://localhost:8080

@@ -4,6 +4,15 @@ Aplicação cliente em **React + Vite** do projeto acadêmico **WebServicesLab**
 
 - **Repositório do Back-end (`StockService`)**: https://github.com/RHU4N/StockServiceXmlJson
 
+## Demonstração publicada
+
+- **SalesWeb**: https://salesweb-xmljson.vercel.app
+- **API HTTPS**: https://stockservice-xmljson.azurewebsites.net/produtos
+- **Configuração e deploy automático**: [DEPLOY.md](DEPLOY.md)
+- **Capturas reais e validação no navegador**: [evidencias-deploy/](evidencias-deploy/)
+
+Ambiente acadêmico temporário, com dados fictícios mantidos em memória no back-end.
+
 ## Tecnologias Utilizadas
 
 - **React** (`19.3.1`)
@@ -23,8 +32,10 @@ Aplicação cliente em **React + Vite** do projeto acadêmico **WebServicesLab**
 
 Certifique-se de que o back-end **StockService** esteja em execução em `http://localhost:8080`.
 
+Use Node.js 24 LTS. Copie `.env.example` para `.env.local` e ajuste `VITE_API_BASE_URL` se necessário. Sem a variável, o desenvolvimento utiliza `http://localhost:8080`. Arquivos locais de ambiente são ignorados pelo Git.
+
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 

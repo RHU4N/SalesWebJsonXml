@@ -1,0 +1,96 @@
+{
+  "url": "https://salesweb-xmljson.vercel.app",
+  "api": "https://stockservice-xmljson.azurewebsites.net",
+  "browser": "158.0.4370.33",
+  "executedAt": "2026-11-27T03:41:10.998Z",
+  "passed": true,
+  "checks": [
+    {
+      "name": "Catálogo inicial e cabeçalhos visíveis",
+      "passed": true
+    },
+    {
+      "name": "Catálogo XML e bytes",
+      "passed": true
+    },
+    {
+      "name": "Consulta por ID em XML",
+      "passed": true
+    },
+    {
+      "name": "Consulta por ID em JSON",
+      "passed": true
+    },
+    {
+      "name": "Comparação lado a lado",
+      "passed": true
+    },
+    {
+      "name": "Tratamento de erro 404",
+      "passed": true
+    },
+    {
+      "name": "POST JSON pelo navegador",
+      "passed": true
+    },
+    {
+      "name": "POST XML pelo navegador",
+      "passed": true
+    },
+    {
+      "name": "Requisições HTTPS para a API correta",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://stockservice-xmljson.azurewebsites.net/produtos"
+    },
+    {
+      "method": "GET",
+      "url": "https://stockservice-xmljson.azurewebsites.net/produtos"
+    },
+    {
+      "method": "GET",
+      "url": "https://stockservice-xmljson.azurewebsites.net/produtos/1"
+    },
+    {
+      "method": "GET",
+      "url": "https://stockservice-xmljson.azurewebsites.net/produtos/1"
+    },
+    {
+      "method": "GET",
+      "url": "https://stockservice-xmljson.azurewebsites.net/produtos/1"
+    },
+    {
+      "method": "GET",
+      "url": "https://stockservice-xmljson.azurewebsites.net/produtos/1"
+    },
+    {
+      "method": "GET",
+      "url": "https://stockservice-xmljson.azurewebsites.net/produtos/999999"
+    },
+    {
+      "method": "GET",
+      "url": "https://stockservice-xmljson.azurewebsites.net/produtos"
+    },
+    {
+      "method": "POST",
+      "url": "https://stockservice-xmljson.azurewebsites.net/produtos"
+    },
+    {
+      "method": "GET",
+      "url": "https://stockservice-xmljson.azurewebsites.net/produtos"
+    },
+    {
+      "method": "POST",
+      "url": "https://stockservice-xmljson.azurewebsites.net/produtos"
+    },
+    {
+      "method": "GET",
+      "url": "https://stockservice-xmljson.azurewebsites.net/produtos"
+    }
+  ]
+}
