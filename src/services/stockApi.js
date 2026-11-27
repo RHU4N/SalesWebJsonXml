@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { getUtf8ByteSize } from '../utils/parsers';
 
-const API_BASE_URL = 'http://localhost:8080';
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080').replace(/\/+$/, '');
 
 const httpClient = axios.create({
   baseURL: API_BASE_URL,
