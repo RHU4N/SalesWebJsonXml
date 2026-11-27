@@ -8,6 +8,7 @@ const httpClient = axios.create({
   timeout: 8000,
 });
 
+// APRESENTACAO 07 — Negociacao de conteudo: o cliente escolhe JSON ou XML pelo Accept.
 export const ACCEPT_HEADERS = {
   json: 'application/json',
   xml: 'application/xml',
@@ -51,6 +52,7 @@ export async function fetchProdutosRaw({ formato, produtoId = '' }) {
   const path = trimmedId ? `/produtos/${encodeURIComponent(trimmedId)}` : '/produtos';
 
   try {
+    // APRESENTACAO 08 — GET: mesma URL, formato solicitado pelo Accept; preserva o corpo textual original.
     const response = await httpClient.get(path, {
       headers: {
         Accept: acceptHeader,
@@ -89,6 +91,7 @@ export async function createProdutoRaw({ formato, produto }) {
   const mediaType = ACCEPT_HEADERS[formato] ?? ACCEPT_HEADERS.json;
   const path = '/produtos';
 
+  // APRESENTACAO 09 — POST: serializa os dados enviados no formato escolhido.
   const payload =
     formato === 'xml'
       ? `<produto><nome>${escapeXml(produto.nome)}</nome><preco>${Number(produto.preco).toFixed(2)}</preco><estoque>${Number(produto.estoque)}</estoque></produto>`
@@ -99,6 +102,7 @@ export async function createProdutoRaw({ formato, produto }) {
         });
 
   try {
+    // APRESENTACAO 10 — Content-Type indica o formato enviado; Accept indica o formato desejado na resposta.
     const response = await httpClient.post(path, payload, {
       headers: {
         'Content-Type': mediaType,

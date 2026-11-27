@@ -12,6 +12,7 @@ export function formatCurrencyBRL(value) {
 }
 
 // Mede o tamanho real em bytes UTF-8 sobre o corpo textual original recebido
+// APRESENTACAO 11 — Mede bytes UTF-8 do corpo original, sem cabecalhos ou compressao.
 export function getUtf8ByteSize(rawText) {
   if (typeof rawText !== 'string') {
     return 0;
@@ -40,6 +41,7 @@ function normalizeProduto(item) {
 export function parseProdutosJson(rawText, isSingle) {
   let parsed;
   try {
+    // APRESENTACAO 12 — JSON.parse converte o texto JSON em valores JavaScript.
     parsed = JSON.parse(rawText);
   } catch {
     throw new Error('Falha ao interpretar JSON recebido do servidor (JSON.parse).');
@@ -66,6 +68,7 @@ function getTagText(parentElement, tagName) {
 
 // Interpreta resposta XML usando DOMParser nativo do navegador
 export function parseProdutosXml(rawText, isSingle) {
+  // APRESENTACAO 13 — DOMParser interpreta a estrutura XML recebida do servidor.
   const parser = new DOMParser();
   const doc = parser.parseFromString(rawText, 'application/xml');
 
